@@ -1,22 +1,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: user
+  name: recommendation
   labels:
-    app: user
+    app: recommendation
 spec:
   replicas: 2
   selector:
     matchLabels:
-       app: user
+       app: recommendation
   template:
     metadata:
       labels:
-        app: user
+        app: recommendation
     spec:
       containers:
-          - name: user
-            image: "dwape/users"
+          - name: recommendation
+            image: "dwape/recommendations"
             ports:
               - containerPort: 80
             env:
@@ -30,4 +30,3 @@ spec:
                   configMapKeyRef:
                      name: db-config
                      key: db_password
-

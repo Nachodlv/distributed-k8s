@@ -1,22 +1,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: user
+  name: email
   labels:
-    app: user
+    app: email
 spec:
   replicas: 2
   selector:
     matchLabels:
-       app: user
+       app: email
   template:
     metadata:
       labels:
-        app: user
+        app: email
     spec:
       containers:
-          - name: user
-            image: "dwape/users"
+          - name: email
+            image: "dwape/email"
             ports:
               - containerPort: 80
             env:
@@ -30,4 +30,3 @@ spec:
                   configMapKeyRef:
                      name: db-config
                      key: db_password
-
