@@ -1,0 +1,12 @@
+Linkerd configuration
+https://linkerd.io/2/getting-started/
+
+Step 1: Install the CLI
+
+1) To install the CLI: curl -sL https://run.linkerd.io/install | sh
+
+2) Add linkerd to your path: export PATH=$PATH:$HOME/.linkerd2/bin
+
+3) Verify the CLI is installed and running correctly with: linkerd version
+
+
