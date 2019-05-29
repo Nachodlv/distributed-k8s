@@ -19,4 +19,15 @@ spec:
             image: "user:v1"
             ports:
               - containerPort: 80
+            env:
+              - name: DB_USER
+                valueFrom:
+                  configMapKeyRef:
+                     name: db-config
+                     key: db_user
+              - name: DB_PASSWORD
+                valueFrom:
+                  configMapKeyRef:
+                     name: db-config
+                     key: db_password
 
