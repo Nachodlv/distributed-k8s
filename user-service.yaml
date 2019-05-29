@@ -1,13 +1,13 @@
 apiVersion: v1
 kind: Service
 metadata: 
-  name: web
+  name: user-service
   labels:
-    app: web
+    app: user
 spec:
   selector:
-    app: web
-  type: LoadBalancer
+    app: user
+  type: ClusterIP
   ports:
     - protocol: TCP
       port: 80
