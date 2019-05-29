@@ -1,0 +1,14 @@
+
+## Linkerd
+
+linkerd install | kubectl apply -f -
+
+kubectl get -n user-deployment deploy -o yaml \
+  | linkerd inject - \
+  | kubectl apply -f -
+
+kubectl get -n user-service deploy -o yaml \
+  | linkerd inject - \
+  | kubectl apply -f -
+
+linkerd dashboard &
