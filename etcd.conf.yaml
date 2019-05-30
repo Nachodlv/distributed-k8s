@@ -1,0 +1,34 @@
+# This is the configuration file for the etcd server.
+
+# Human-readable name for this member.
+name: 'default'
+
+# Path to the data directory.
+data-dir: /etcd-data
+
+# List of comma separated URLs to listen on for peer traffic.
+listen-peer-urls: http://localhost:2380
+
+# List of comma separated URLs to listen on for client traffic.
+listen-client-urls: http://localhost:2379
+
+# List of this member's peer URLs to advertise to the rest of the cluster.
+# The URLs needed to be a comma-separated list.
+initial-advertise-peer-urls: http://localhost:2380
+
+# List of this member's client URLs to advertise to the public.
+# The URLs needed to be a comma-separated list.
+advertise-client-urls: http://localhost:2379
+
+# Initial cluster configuration for bootstrapping.
+initial-cluster: s1=http://0.0.0.0:2380
+
+# Initial cluster token for the etcd cluster during bootstrap.
+initial-cluster-token: 'tkn'
+
+# Initial cluster state ('new' or 'existing').
+initial-cluster-state: 'new'
+
+# Time (in milliseconds) for an election to timeout.
+# We could just set this up here, instead of having another config map
+election-timeout: 1000

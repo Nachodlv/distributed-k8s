@@ -3,6 +3,10 @@
 1. Install Mysql through helm -> helm install stable/mysql
 2. Create secret for username and password -> kubectl apply -f ./secret.yaml
 
+#Etcd
+
+helm install bitnami/etcd --set configFileConfigMap=etcd-conf --set service.nodePort=2379 --set service.peerPort=2380
+
 #Linkerd
 
 1. Install likerd through intall-linerd.txt

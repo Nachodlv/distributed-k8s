@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: recommendation-time
+  namespace: default
+data:
+  # Duration of the leader term, in milliseconds
+  term-duration: 8000 
