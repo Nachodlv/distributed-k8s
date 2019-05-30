@@ -20,13 +20,8 @@ spec:
             ports:
               - containerPort: 80
             env:
-              - name: DB_USER
+              - name: recommendation_time
                 valueFrom:
                   configMapKeyRef:
-                     name: db-config
-                     key: db_user
-              - name: DB_PASSWORD
-                valueFrom:
-                  configMapKeyRef:
-                     name: db-config
-                     key: db_password
+                     name: recommendation-time
+                     key: term-duration
