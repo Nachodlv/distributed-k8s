@@ -1,0 +1,9 @@
+## Secret
+
+1. Install Mysql through helm -> helm install stable/mysql
+2. Create secret for username and password -> kubectl apply -f ./secret.yaml
+
+#Linkerd
+
+1. Install likerd through intall-linerd.txt
+2. Execute linkerd-setup.sh
